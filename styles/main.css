@@ -1,0 +1,145 @@
+* {
+	box-sizing: border-box; /*учитывает паддинги в withd*/
+
+}
+
+body {
+	position: relative;
+	/** position absolte убирает элемент из общего потока */
+	font-family: 'Lato', sans-serif;
+}
+
+
+
+a {
+	color: rgba(255, 255, 255, 0.8); /* белый с кремом*/
+	text-decoration: underline; /* подчеркивание */
+	transition: color 0.2s linear; /* для анимации цвета*/
+}
+
+a:hover {
+	text-decoration: none; /* при наведении ...*/
+	color: #fff;
+}
+
+
+/* header */
+.header {
+	position: absolute; /* выносим хедер из общего потока, секция остается на заднем плане*/
+	width: 100%; 
+	display: flex; /* выстраивает элемент в одну строку */
+	padding:  0 10%; /* отступ по бкам */
+}
+
+
+.logo {
+	width: 129px;
+	height: 108px;
+}
+
+.logo__img {
+	width: 100%; /* изображение подстраиваетя под размер логотипа*/
+}
+
+
+
+/* menu */
+.menu {
+	margin-left: auto; /* отодвигает влево максимально далеко, т.к. у родителя display flex*/
+	
+
+}
+
+.menu__list {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	height: 100%;
+	margin:  0;
+	padding:  0;
+}
+
+.menu__item {
+	margin-right: 30px;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.menu__link {
+	text-transform: uppercase;
+	text-decoration: none;
+
+}
+
+
+
+/* MAIN */
+
+.main {
+	background-image: url('../images/bg.jpg');
+	background-size: cover; /* масштабирование в зависимости от окна*/
+	height: 100vh; /* 100% from devise screen size*/
+	color: #fff;
+	display: flex;
+	align-items: center;
+	flex-direction: column; /* вертикальный flex*/
+
+	justify-content: center; /* горизонтальное выравнивание*/
+}	
+
+.main__title {
+	font-family: 'Times New Roman';
+	/**color:  #ffffff; * задан у секции, распространяется а все вложенные элементы*/ 
+	font-size: 36px;
+	font-weight: 700;
+	font-style: italic;
+	letter-spacing: 1.8px;
+	text-shadow: 0px 1px 40px rgba(1, 1, 1, 0.55);
+	text-align: center;
+	margin-bottom: 40px;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.main__title-big {
+	font-family: Lato;
+	font-size: 100px;
+	font-weight: 700;
+	text-transform: uppercase;
+	
+	
+	display: block;
+	font-style: normal;
+	
+	color: #fff;
+	text-align: center;
+
+}
+
+.main__button {
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: 700;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	
+	text-decoration: none;
+	text-transform: uppercase;
+
+	border-radius: 3px;
+	border: 3px solid #fff;
+	
+	width: 280px;
+	height: 68px;
+	margin-bottom: 40px;
+}
+
+.main__description {
+	font-family: Lato;
+	color:  #ffffff;
+	font-size: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: 0px 1px 40px rgba(1, 1, 1, 0.55);
+
+}
